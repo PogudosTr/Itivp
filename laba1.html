@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости Технологий</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #0073e6;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #0073e6;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #005bb5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .article {
+            background: white;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .article:hover {
+            transform: translateY(-5px);
+        }
+        .article img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .article h2 {
+            margin: 0 0 10px;
+        }
+        .article p {
+            line-height: 1.5;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #0073e6;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Новости Технологий</h1>
+    <nav>
+        <a href="#">Главная</a>
+        <a href="#">Новости</a>
+        <a href="#">Обзоры</a>
+        <a href="#">Контакты</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="article">
+        <img src="https://via.placeholder.com/800x400" alt="Искусственный интеллект">
+        <h2>Новая технология в области искусственного интеллекта</h2>
+        <p>Искусственный интеллект продолжает развиваться, и новая технология обещает революционизировать...</p>
+    </div>
+    <div class="article">
+        <img src="https://via.placeholder.com/800x400" alt="Гаджеты 2023">
+        <h2>Тренды в мире гаджетов на 2023 год</h2>
+        <p>В этом году мы увидим множество интересных гаджетов, включая...</p>
+    </div>
+    <div class="article">
+        <img src="https://via.placeholder.com/800x400" alt="Виртуальная реальность">
+        <h2>Будущее виртуальной реальности</h2>
+        <p>Виртуальная реальность становится все более доступной, и ее применение в различных сферах...</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 Новости Технологий</p>
+</footer>
+
+</body>
+</html>
