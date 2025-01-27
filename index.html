@@ -1,104 +1,176 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новости Технологий</title>
+    <title>News Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f5f5f5;
+            color: #333;
         }
+
         header {
-            background: #0073e6;
-            color: white;
-            padding: 20px;
-            text-align: center;
+            background-color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
         }
-        nav {
-            margin: 20px 0;
+
+        header img {
+            height: 50px;
         }
-        nav a {
-            color: #0073e6;
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
             text-decoration: none;
-            margin: 0 15px;
+            color: #333;
             font-weight: bold;
-            transition: color 0.3s;
         }
-        nav a:hover {
-            color: #005bb5;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
+
+        .hero {
+            background-color: #ececec;
             padding: 20px;
-        }
-        .article {
-            background: white;
-            border-radius: 5px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .article:hover {
-            transform: translateY(-5px);
-        }
-        .article img {
-            max-width: 100%;
-            border-radius: 5px;
-        }
-        .article h2 {
-            margin: 0 0 10px;
-        }
-        .article p {
-            line-height: 1.5;
-        }
-        footer {
             text-align: center;
-            padding: 10px 0;
-            background: #0073e6;
-            color: white;
-            position: relative;
-            bottom: 0;
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: calc(33.333% - 20px);
+        }
+
+        .card img {
             width: 100%;
+            height: auto;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+
+        .card-content p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        .card-actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            border-top: 1px solid #ddd;
+        }
+
+        .card-actions span {
+            font-size: 14px;
+            color: #999;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Новости Технологий</h1>
+    <img src="logo.png" alt="Logo">
     <nav>
-        <a href="#">Главная</a>
-        <a href="#">Новости</a>
-        <a href="#">Обзоры</a>
-        <a href="#">Контакты</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Politics</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Sports</a></li>
+            <li><a href="#">World</a></li>
+            <li><a href="#">Travel</a></li>
+        </ul>
     </nav>
 </header>
 
-<div class="container">
-    <div class="article">
-        <img src="https://via.placeholder.com/800x400" alt="Искусственный интеллект">
-        <h2>Новая технология в области искусственного интеллекта</h2>
-        <p>Искусственный интеллект продолжает развиваться, и новая технология обещает революционизировать...</p>
+<div class="hero">
+    <h1>Trending</h1>
+    <p>Cake meme reflects coronavirus absurdity in a world where nothing is what it seems</p>
+</div>
+
+<div class="main-content">
+    <div class="card">
+        <img src="news1.jpg" alt="News 1">
+        <div class="card-content">
+            <h3>John Lewis makes final journey across bridge</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card-actions">
+            <span>2 hours ago</span>
+            <span>5 min read</span>
+        </div>
     </div>
-    <div class="article">
-        <img src="https://via.placeholder.com/800x400" alt="Гаджеты 2023">
-        <h2>Тренды в мире гаджетов на 2023 год</h2>
-        <p>В этом году мы увидим множество интересных гаджетов, включая...</p>
+
+    <div class="card">
+        <img src="news2.jpg" alt="News 2">
+        <div class="card-content">
+            <h3>Storm Hanna hits the coast</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card-actions">
+            <span>5 hours ago</span>
+            <span>3 min read</span>
+        </div>
     </div>
-    <div class="article">
-        <img src="https://via.placeholder.com/800x400" alt="Виртуальная реальность">
-        <h2>Будущее виртуальной реальности</h2>
-        <p>Виртуальная реальность становится все более доступной, и ее применение в различных сферах...</p>
+
+    <div class="card">
+        <img src="news3.jpg" alt="News 3">
+        <div class="card-content">
+            <h3>20 Years Ago: Steve Jobs introduced the iMac</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card-actions">
+            <span>13 hours ago</span>
+            <span>4 min read</span>
+        </div>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2023 Новости Технологий</p>
+    <p>&copy; 2025 News Website. All Rights Reserved.</p>
 </footer>
 
 </body>
