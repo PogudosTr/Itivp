@@ -20,6 +20,7 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #ddd;
+            position: relative;
         }
 
         header img {
@@ -41,6 +42,12 @@
             text-decoration: none;
             color: #333;
             font-weight: bold;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
         }
 
         .hero {
@@ -108,12 +115,46 @@
             padding: 20px;
             text-align: center;
         }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #fff;
+                width: 100%;
+                border-top: 1px solid #ddd;
+                padding: 10px;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
     <img src="logo.png" alt="Logo">
+    <span class="menu-toggle">☰</span>
     <nav>
         <ul>
             <li><a href="#">Home</a></li>
@@ -133,7 +174,7 @@
 
 <div class="main-content">
     <div class="card">
-        <img src="news1.jpg" alt="News 1">
+        <img src="news1.jpg" alt="John Lewis makes final journey across bridge">
         <div class="card-content">
             <h3>John Lewis makes final journey across bridge</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -145,7 +186,7 @@
     </div>
 
     <div class="card">
-        <img src="news2.jpg" alt="News 2">
+        <img src="news2.jpg" alt="Storm Hanna hits the coast">
         <div class="card-content">
             <h3>Storm Hanna hits the coast</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -157,7 +198,7 @@
     </div>
 
     <div class="card">
-        <img src="news3.jpg" alt="News 3">
+        <img src="news3.jpg" alt="20 Years Ago: Steve Jobs introduced the iMac">
         <div class="card-content">
             <h3>20 Years Ago: Steve Jobs introduced the iMac</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -172,6 +213,12 @@
 <footer>
     <p>&copy; 2025 News Website. All Rights Reserved.</p>
 </footer>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        document.querySelector('nav ul').classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
