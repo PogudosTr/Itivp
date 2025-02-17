@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale: 1.0">
+    <title>Технические Новости</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -54,11 +54,25 @@
             background-color: #ececec;
             padding: 20px;
             text-align: center;
+            position: relative; /* Добавляем для позиционирования текста */
         }
 
         .hero img {
-            max-width: 100%;
+            width: 100%; /* Растягиваем по горизонтали */
             height: auto;
+            max-height: 20vh; /* Ограничиваем высоту 1/3 viewport height */
+            object-fit: cover; /*  Гарантируем, что изображение заполнит контейнер, обрезая его при необходимости */
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px #000000; /*  Добавляем тень для лучшей читаемости */
         }
 
         .main-content {
@@ -109,6 +123,21 @@
             color: #999;
         }
 
+        /* Стили для ссылок на карточки */
+        .card-link {
+            text-decoration: none; /* Убираем подчеркивание */
+            color: inherit; /* Наследуем цвет текста от родителя */
+            display: block; /*  Делаем ссылку блочным элементом, чтобы она занимала всю площадь карточки */
+            height: 100%; /* Растягиваем ссылку на всю высоту карточки */
+        }
+
+        /* Стили для ссылки на тренды */
+        .hero-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
         footer {
             background-color: #333;
             color: #fff;
@@ -153,65 +182,73 @@
 <body>
 
 <header>
-    <img src="logo.png" alt="Logo">
+    <img src="logo.webp" alt="logo">
     <span class="menu-toggle">☰</span>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Politics</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">Sports</a></li>
-            <li><a href="#">World</a></li>
-            <li><a href="#">Travel</a></li>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Программирование</a></li>
+            <li><a href="#">Наука</a></li>
+            <li><a href="#">Гаджеты</a></li>
+            <li><a href="#">Технологии</a></li>
+            <li><a href="#">Игры</a></li>
         </ul>
     </nav>
 </header>
 
-<div class="hero">
-    <h1>Trending</h1>
-    <p>Cake meme reflects coronavirus absurdity in a world where nothing is what it seems</p>
-</div>
+<a href="#" class="hero-link">
+    <div class="hero">
+        <img src="trending.jpeg" alt="Новый графический процессор от Nvidia устанавливает рекорды производительности">
+        <div class="hero-text">Новый графический процессор от Nvidia...</div>
+    </div>
+</a>
 
 <div class="main-content">
     <div class="card">
-        <img src="news1.jpg" alt="John Lewis makes final journey across bridge">
-        <div class="card-content">
-            <h3>John Lewis makes final journey across bridge</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card-actions">
-            <span>2 hours ago</span>
-            <span>5 min read</span>
-        </div>
+        <a href="#" class="card-link">
+            <img src="news1.jpg" alt="Разработка нового алгоритма машинного обучения">
+            <div class="card-content">
+                <h3>Разработка нового алгоритма машинного обучения</h3>
+                <p>Ученые представили новый алгоритм машинного обучения, который значительно повышает точность распознавания изображений.</p>
+            </div>
+            <div class="card-actions">
+                <span>2 часа назад</span>
+                <span>5 мин чтения</span>
+            </div>
+        </a>
     </div>
 
     <div class="card">
-        <img src="news2.jpg" alt="Storm Hanna hits the coast">
-        <div class="card-content">
-            <h3>Storm Hanna hits the coast</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card-actions">
-            <span>5 hours ago</span>
-            <span>3 min read</span>
-        </div>
+        <a href="#" class="card-link">
+            <img src="news2.jpg" alt="Apple представила новый iPhone с улучшенной камерой">
+            <div class="card-content">
+                <h3>Apple представила новый iPhone с улучшенной камерой</h3>
+                <p>Компания Apple анонсировала свой новый флагманский смартфон iPhone с революционной технологией камеры.</p>
+            </div>
+            <div class="card-actions">
+                <span>5 часов назад</span>
+                <span>3 мин чтения</span>
+            </div>
+        </a>
     </div>
 
     <div class="card">
-        <img src="news3.jpg" alt="20 Years Ago: Steve Jobs introduced the iMac">
-        <div class="card-content">
-            <h3>20 Years Ago: Steve Jobs introduced the iMac</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <div class="card-actions">
-            <span>13 hours ago</span>
-            <span>4 min read</span>
-        </div>
+        <a href="#" class="card-link">
+            <img src="news3.jpg" alt="Обнаружена уязвимость в популярной библиотеке JavaScript">
+            <div class="card-content">
+                <h3>Обнаружена уязвимость в популярной библиотеке JavaScript</h3>
+                <p>Эксперты по безопасности обнаружили критическую уязвимость в широко используемой библиотеке JavaScript, которая может привести к XSS-атакам.</p>
+            </div>
+            <div class="card-actions">
+                <span>13 часов назад</span>
+                <span>4 мин чтения</span>
+            </div>
+        </a>
     </div>
 </div>
 
 <footer>
-    <p>&copy; 2025 News Website. All Rights Reserved.</p>
+    <p>&copy; 2025 Технические Новости. Все права защищены.</p>
 </footer>
 
 <script>
@@ -219,6 +256,3 @@
         document.querySelector('nav ul').classList.toggle('active');
     });
 </script>
-
-</body>
-</html>
