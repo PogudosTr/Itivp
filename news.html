@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Технические Новости - Полная статья</title>
+    <link rel="stylesheet" href="css/news_styles.css">
+</head>
+<body>
+
+<header>
+    <img src="images/logo.webp" alt="logo">
+    <span class="menu-toggle">☰</span>
+    <nav>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="#">Программирование</a></li>
+            <li><a href="#">Наука</a></li>
+            <li><a href="#">Гаджеты</a></li>
+            <li><a href="#">Технологии</a></li>
+            <li><a href="#">Игры</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main class="article-content">
+    <article>
+        <h1>Разработка нового алгоритма машинного обучения</h1>
+        <p class="article-meta">Опубликовано: 2 часа назад | Время чтения: 5 мин</p>
+        <img src="images/news1.jpg" alt="Разработка нового алгоритма машинного обучения" class="article-image">
+        <p>Ученые представили новый алгоритм машинного обучения, который значительно повышает точность распознавания изображений. Этот алгоритм использует улучшенные методы нейронных сетей для обработки данных...</p>
+        <p>Тестирование показало, что новая модель превосходит существующие аналоги по точности на 15%. В будущем разработчики планируют адаптировать алгоритм для использования в реальном времени на мобильных устройствах...</p>
+        <p>Дополнительные исследования позволят улучшить производительность системы и адаптировать её для более сложных задач.</p>
+    </article>
+
+    <section class="comments-section">
+    <h2>Комментарии</h2>
+
+    <div class="comment">
+        <div class="comment-header">Александр <span class="comment-time">15 минут назад</span></div>
+        <p class="comment-text">Очень интересно, жду публикацию научной статьи!</p>
+    </div>
+
+    <div class="comment">
+        <div class="comment-header">Мария <span class="comment-time">30 минут назад</span></div>
+        <p class="comment-text">Интересно, как он показывает себя на практике?</p>
+    </div>
+
+    <form id="comment-form">
+        <input type="text" id="comment-input" placeholder="Оставьте комментарий...">
+        <button type="submit">Добавить</button>
+    </form>
+</section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Технические Новости. Все права защищены.</p>
+</footer>
+
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function () {
+        document.querySelector('nav ul').classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>
