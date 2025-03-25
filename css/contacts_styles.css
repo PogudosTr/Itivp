@@ -142,32 +142,53 @@ footer {
     border-top: 1px solid #555; /* Add a subtle top border */
 }
 
-/* Media Queries for Responsiveness */
+
 @media (max-width: 768px) {
     .main-content {
         width: 95%;
         padding: 15px;
     }
 
-    nav ul {
-        display: none;
-        flex-direction: column;
+.menu-toggle {
+        display: block;
+        z-index: 1001; 
+        position: relative;
+    }
+
+    nav {
         position: absolute;
         top: 60px;
         left: 0;
-        background-color: #fff;
         width: 100%;
+        background: #fff;
         border-top: 1px solid #ddd;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        display: none;
+        z-index: 1000; /* Поднимаем меню выше всех */
+    }
+
+    nav ul {
+        list-style: none;
         padding: 10px;
-        z-index: 10;
-    }
-
-    nav ul.active {
+        margin: 0;
         display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .menu-toggle {
+    nav ul li {
+        text-align: center;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
         display: block;
-        cursor: pointer;
+        padding: 10px;
+    }
+
+    nav.active {
+        display: block;
     }
 }
