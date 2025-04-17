@@ -2,84 +2,41 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale: 1.0">
-    <title>Технические Новости</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение для заметок</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <img src="images/logo.webp" alt="logo">
-    <span class="menu-toggle">☰</span>
-    <nav>
-        <ul>
-            <li><a href="index.html">Главная</a></li>
-            <li><a href="#">Программирование</a></li>
-            <li><a href="#">Наука</a></li>
-            <li><a href="pages/gadgets.html">Гаджеты</a></li>
-            <li><a href="#">Технологии</a></li>
-            <li><a href="#">Игры</a></li>
-            <li><a href="pages/contacts.html">Контакты</a></li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <h1>Мои заметки</h1>
+    </header>
 
-<a href="pages/news.html" class="hero-link">
-    <div class="hero">
-        <img src="images/trending.jpeg" alt="Тренды: Новый графический процессор от Nvidia побил все рекорды скорости">
-        <div class="hero-text">Тренды: Новый графический процессор от Nvidia побил все рекорды скорости</div>
-    </div>
-</a>
+    <main>
+        <section id="note-list">
+            <h2>Список заметок</h2>
+            <ul id="notes">
+            </ul>
+        </section>
 
-<div class="main-content">
-    <div class="card">
-        <a href="pages/news.html" class="card-link">
-            <img src="images/news1.jpg" alt="Разработка нового алгоритма машинного обучения">
-            <div class="card-content">
-                <h3>Разработка нового алгоритма машинного обучения</h3>
-                <p>Ученые представили новый алгоритм машинного обучения, который значительно повышает точность распознавания изображений.</p>
-            </div>
-            <div class="card-actions">
-                <span>2 часа назад</span>
-                <span>5 мин чтения</span>
-            </div>
-        </a>
-    </div>
+        <section id="note-editor">
+            <h2>Создать/Редактировать заметку</h2>
+            <form id="note-form">
+                <label for="title">Заголовок:</label>
+                <input type="text" id="title" name="title" required>
 
-    <div class="card">
-        <a href="pages/news.html" class="card-link">
-            <img src="images/news2.jpg" alt="Apple представила новый iPhone с улучшенной камерой">
-            <div class="card-content">
-                <h3>Apple представила новый iPhone с улучшенной камерой</h3>
-                <p>Компания Apple анонсировала свой новый флагманский смартфон iPhone с революционной технологией камеры.</p>
-            </div>
-            <div class="card-actions">
-                <span>5 часов назад</span>
-                <span>3 мин чтения</span>
-            </div>
-        </a>
-    </div>
+                <label for="content">Содержание:</label>
+                <textarea id="content" name="content" rows="5" required></textarea>
 
-    <div class="card">
-        <a href="pages/news.html" class="card-link">
-            <img src="images/news3.jpg" alt="Обнаружена уязвимость в популярной библиотеке JavaScript">
-            <div class="card-content">
-                <h3>Обнаружена уязвимость в популярной библиотеке JavaScript</h3>
-                <p>Эксперты по безопасности обнаружили критическую уязвимость в широко используемой библиотеке JavaScript, которая может привести к XSS-атакам.</p>
-            </div>
-            <div class="card-actions">
-                <span>13 часов назад</span>
-                <span>4 мин чтения</span>
-            </div>
-        </a>
-    </div>
-</div>
+                <button type="submit">Сохранить</button>
+                <button type="button" id="cancel-button">Отмена</button>
+            </form>
+        </section>
+    </main>
 
-<footer>
-    <p>&copy; 2025 Технические Новости. Все права защищены.</p>
-</footer>
+    <footer>
+        <p>© 2025 Мои заметки</p>
+    </footer>
 
-<script>
-    document.querySelector('.menu-toggle').addEventListener('click', function () {
-        document.querySelector('nav ul').classList.toggle('active');
-    });
-</script>
+    <script src="script.js"></script>
+</body>
+</html>
